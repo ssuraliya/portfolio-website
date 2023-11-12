@@ -16,6 +16,13 @@ class NameSection(BaseStructBlock):
     
     class Meta:
         template = "blocks/name_section.html"
+        
+class AboutMeSection(BaseStructBlock):
+    content = blocks.RichTextBlock(required=True)
+    
+    class Meta:
+        template = "blocks/about_me.html"
 
 class PortfolioStreamBlock(blocks.StreamBlock):
     name_section = NameSection()
+    about_me = AboutMeSection()
