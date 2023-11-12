@@ -1,4 +1,5 @@
 from wagtail import blocks
+from wagtail.snippets.blocks import SnippetChooserBlock
 
 
 class BaseStructBlock(blocks.StructBlock):
@@ -23,6 +24,14 @@ class AboutMeSection(BaseStructBlock):
     class Meta:
         template = "blocks/about_me.html"
 
+class WorkExperienceSection(BaseStructBlock):
+    works = blocks.ListBlock(SnippetChooserBlock('home.WorkExperience'))
+
+    class Meta:
+        template = "blocks/work_experience.html"
+
+
 class PortfolioStreamBlock(blocks.StreamBlock):
     name_section = NameSection()
     about_me = AboutMeSection()
+    work_experience = WorkExperienceSection()

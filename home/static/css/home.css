@@ -38,3 +38,27 @@
     font-weight: 400;
     opacity: .8;
 }
+
+.card {
+    background-color: transparent;
+    color: white;
+}
+
+.we-company-name {
+    font-size: 20px;
+}
+
+.we-designation {
+    font-size: 22px;
+}
+
+.we-skill-tag {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid;
+    padding: 5px 15px;
+    font-size: 15px;
+    transition: clip-path 500ms;
+
+}
