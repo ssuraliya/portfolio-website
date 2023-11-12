@@ -1,7 +1,6 @@
 """Menus models."""
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db import models
-from django.db.transaction import atomic
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 from wagtail.admin.panels import FieldPanel, FieldRowPanel, InlinePanel, PageChooserPanel
@@ -10,7 +9,6 @@ from wagtail.models import Orderable, PreviewableMixin
 
 from wagtail.contrib.settings.models import (
     BaseGenericSetting,
-    BaseSiteSetting,
     register_setting,
 )
 
