@@ -36,6 +36,9 @@ class WorkExperience(models.Model):
         FieldPanel("description"),
     ]
 
+    def __str__(self) -> str:
+        return f'{self.position}: {self.company_name}'
+
     @property
     def start(self):
         return self.start_date.strftime("%B, %Y")
@@ -53,3 +56,41 @@ class WorkExperience(models.Model):
             return []
         
         return list(map(str.strip, self.skills.split(',')))
+
+
+class Project(models.Model):
+    title = models.CharField(max_length=255, null=False, blank=False)
+    description = RichTextField(null=False)
+    skills = models.TextField(null=True, help_text="Comma separated skills")
+    code_link = models.URLField(null=True, blank=True)
+    report_link  = models.URLField(null=True, blank=True)
+    live_link = models.URLField(null=True, blank=True)
+    image = models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+    )
+    
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    content_panels = [
+        FieldPanel("title"),
+        FieldPanel("description"),
+        FieldPanel("skills"),
+        FieldPanel("code_link"),
+        FieldPanel("report_link"),
+        FieldPanel("live_link"),
+    ]
+    
+    def __str__(self) -> str:
+        return self.title
+
+    @property
+    def skills_list(self):
+        if not self.skills:
+            return []
+        
+        return list(map(str.strip, self.skills.split(',')))
+

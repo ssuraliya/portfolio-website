@@ -1,0 +1,42 @@
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+<div class="container mt-5">
+  <div class="about-me">Projects.</div>
+  <hr />
+  <div class="row">
+    {% for each_project in self.projects %}
+      <div class="col-md-6">
+        <div class="container">
+          <section class="mx-auto my-5">
+            <div class="card project-card v-2 mt-2 mb-4 rounded-bottom">
+              <div class="bg-image">
+                {% image each_project.image scale-100 as image %}
+                <img class="img-fluid project-card-img-top" src={{image.url}} >
+                <a href="#!"><div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div></a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold"><a>{{ each_project.title }}</a></h4>
+                <div class="card-text">{{ each_project.description|richtext }}</div>
+                {% for each_skill in each_project.skills_list %}
+                <div class="we-skill-tag my-1">{{each_skill}}</div>
+                {% endfor %}
+                <hr />
+                <div class="d-flex flex-row justify-content-between">
+                  {% if each_project.code_link %}
+                    <a href={{each_project.code_link}} target="_blank" class="text-decoration-none">code →</a>
+                  {% endif %}
+                  {% if each_project.report_link %}
+                    <a href={{each_project.report_link}} target="_blank" class="text-decoration-none">report →</a>
+                  {% endif %}
+                  {% if each_project.live_link %}
+                    <a href={{each_project.live_link}} target="_blank" class="text-decoration-none">live →</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

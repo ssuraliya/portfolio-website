@@ -29,9 +29,18 @@ class WorkExperienceSection(BaseStructBlock):
 
     class Meta:
         template = "blocks/work_experience.html"
+        icon = "desktop"
+
+class ProjectSelection(BaseStructBlock):
+    projects = blocks.ListBlock(SnippetChooserBlock('home.Project'))
+
+    class Meta:
+        template = "blocks/project.html"
+        icon = 'code'
 
 
 class PortfolioStreamBlock(blocks.StreamBlock):
     name_section = NameSection()
     about_me = AboutMeSection()
     work_experience = WorkExperienceSection()
+    projects = ProjectSelection()
