@@ -13,7 +13,10 @@ class BaseStructBlock(blocks.StructBlock):
 class NameSection(BaseStructBlock):
     name = blocks.CharBlock(required=True)
     position = blocks.CharBlock(required=True)
-    company_name = blocks.CharBlock(required=True)    
+    company_name = blocks.CharBlock(required=True)
+    contact_no = blocks.CharBlock(required=True)
+    email = blocks.CharBlock(required=True)
+    location = blocks.CharBlock(required=True)
     
     class Meta:
         template = "blocks/name_section.html"

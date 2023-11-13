@@ -6,4 +6,15 @@
     </span>
     <span class="dev-designation">{{self.position}}</span>
     <span class="dev-company-name">{{self.company_name}}</span>
+
+
+    <div class="row mt-3" style="width: 100%">
+    <div class=" contact-details col-lg-6 py-3 align-self-center text-center contact-details">
+            <a href="tel:{{self.contact_no}}" style="text-decoration: none; color: white"><img style="height: 25px; margin-right: 4px" src={% static "img/call.png" %}> {{self.contact_no}}</a>
+    </div>
+    <div class=" contact-details col-lg-6 py-3 align-self-center text-center contact-details">
+            <a href="mailto:{{self.email}}" style="text-decoration: none; color: white"><img style="height: 25px; margin-right: 4px" src={% static "img/mail.png" %}> {{self.email}}</a>
+
+    </div>
+</div>
 </div>

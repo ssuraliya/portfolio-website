@@ -3,10 +3,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     min-height: 200px;
     max-height: 340px;
+}
+
+@media screen and (max-width: 450px) {
+    .name-section {
+      justify-content: left;
+      align-items: start;
+    }
+  }
+
+@media screen and (max-width: 450px) {
+.contact-details {
+    align-items: start;
+    display: flex;
+}
 }
 
 .about-me {
@@ -15,12 +29,39 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 450px) {
+    .about-me {
+        font-size: 2.5rem;
+    }
+    }
+    
+
+
 .dev-name {
     padding: 0;
     font-size: 5rem;
     line-height: 1em;
     font-weight: 600;
 }
+
+@media screen and (min-width: 801px) {
+    .dev-name {
+        font-size: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 800px) and (min-width: 451px) {
+    .dev-name {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .dev-name {
+      font-size: 3rem;
+    }
+  }
+
 
 .dev-designation {
     margin: 0;
@@ -31,6 +72,25 @@
     opacity: .8;
 }
 
+@media screen and (min-width: 801px) {
+    .dev-designation {
+        font-size: 2.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 800px) and (min-width: 451px) {
+    .dev-designation {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .dev-designation {
+      font-size: 1.5rem;
+    }
+  }
+
+
 .dev-company-name {
     margin: 0;
     font-size: 2.1rem;
@@ -38,6 +98,25 @@
     font-weight: 400;
     opacity: .8;
 }
+
+@media screen and (min-width: 801px) {
+    .dev-company-name {
+        font-size: 2.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 800px) and (min-width: 451px) {
+    .dev-company-name {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .dev-company-name {
+      font-size: 1.5rem;
+    }
+  }
+
 
 .card {
     background-color: transparent;
