@@ -1,4 +1,4 @@
-{% load static wagtailcore_tags wagtailimages_tags %}
+{% load static wagtailcore_tags wagtailimages_tags header_tags %}
 
 <div class="container navbar-container" style="margin-top: 20px">
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
@@ -8,7 +8,8 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           {% for header_item in settings.headers.Header.header_items.all%}
             <li class="nav-item active">
-              <a class="nav-link" href={{header_item.link}}>{{header_item.title}}</a>
+              {% get_header_link with link=header_item.link request=request as return_link %}
+              <a class="nav-link" href={{return_link}}>{{header_item.title}}</a>
             </li>
           {% endfor %}
         </ul>

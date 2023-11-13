@@ -1,6 +1,6 @@
 {% load static wagtailcore_tags %}
 
-<div class="container">
+<div id="{{self.id}}" class="container">
     <div class="about-me">Skills.</div>
     <hr>
     {% for each_skill_group in self.skill_groups %}

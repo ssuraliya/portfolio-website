@@ -41,3 +41,10 @@ def get_header_preview(context, object, calling_page=None):
         # required by the pageurl tag that we want to use within this template
         "request": context["request"],
     }
+    
+@register.simple_tag()
+def get_header_link(context, request, link):
+    url = request.build_absolute_uri()
+    if link.startswith("/#"):
+        return f"{url}{link[1:]}"
+    return link

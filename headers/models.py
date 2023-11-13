@@ -44,17 +44,15 @@ class HeaderItem(Orderable):
 
     @property
     def link(self):
-        url = "#"
+        url = ""
         if self.link_page:
             url = self.link_page.url
         elif self.link_url:
             url = self.link_url
         else:
-            return "#"
-        if self.block_id and self.block_id.startswith("#"):            
-            return f"{url}{self.block_id[1:]}"
-        elif self.block_id:
-            return f"{url}#{self.block_id}"
+            return ""
+        if self.block_id:
+            return f"{url}{self.block_id}"
         return url
 
     @property
