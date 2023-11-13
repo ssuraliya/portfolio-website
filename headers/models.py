@@ -51,7 +51,9 @@ class HeaderItem(Orderable):
             url = self.link_url
         else:
             return "#"
-        if self.block_id:
+        if self.block_id and self.block_id.startswith("#"):            
+            return f"{url}{self.block_id}"
+        elif self.block_id:
             return f"{url}#{self.block_id}"
         return url
 
