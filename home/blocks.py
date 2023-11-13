@@ -20,9 +20,15 @@ class NameSection(BaseStructBlock):
         
 class AboutMeSection(BaseStructBlock):
     content = blocks.RichTextBlock(required=True)
-    
+
     class Meta:
         template = "blocks/about_me.html"
+
+class Skills(BaseStructBlock):
+    skill_groups = blocks.ListBlock(SnippetChooserBlock('home.SkillGroup'))
+    
+    class Meta:
+        template = "blocks/skills.html"
 
 class WorkExperienceSection(BaseStructBlock):
     works = blocks.ListBlock(SnippetChooserBlock('home.WorkExperience'))
@@ -44,3 +50,4 @@ class PortfolioStreamBlock(blocks.StreamBlock):
     about_me = AboutMeSection()
     work_experience = WorkExperienceSection()
     projects = ProjectSelection()
+    skills = Skills()

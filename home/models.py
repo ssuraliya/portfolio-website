@@ -94,3 +94,18 @@ class Project(models.Model):
         
         return list(map(str.strip, self.skills.split(',')))
 
+
+class SkillGroup(models.Model):
+    title = models.CharField(max_length=255, null=False, blank=False)
+    skills = models.TextField(null=True, help_text="Comma separated skills")
+    
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    content_panels = [
+        FieldPanel("title"),
+        FieldPanel("skills"),
+    ]
+    
+    def __str__(self) -> str:
+        return self.title

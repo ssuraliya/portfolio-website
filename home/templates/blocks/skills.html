@@ -1,0 +1,10 @@
+{% load static wagtailcore_tags %}
+
+<div class="container">
+    <div class="about-me">Skills.</div>
+    <hr>
+    {% for each_skill_group in self.skill_groups %}
+        <p style="font-size: 30px"><span style="font-weight: 500">{{each_skill_group.title}}: </span> {{each_skill_group.skills}}</p> 
+    {% endfor %}
+    
+</div>

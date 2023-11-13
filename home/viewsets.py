@@ -15,3 +15,10 @@ class ProjectsCreateViewSet(SnippetViewSet):
     menu_name = "Projects"
     menu_order = 100
     add_to_admin_menu = True
+    
+class SkillGroupCreateViewSet(SnippetViewSet):
+    icon = "code"
+    menu_label = "Skill Group"
+    menu_name = "Skill Group"
+    menu_order = 100
+    add_to_admin_menu = True
