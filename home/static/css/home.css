@@ -146,6 +146,7 @@
     max-width: 700px;
     border: 1px solid;
     padding: 10px;
+    transition: transform .2s;
 }
 
 .project-card-img-top {
@@ -154,3 +155,7 @@
     object-fit: cover;
 }
 
+
+.project-card:hover {
+  transform: scale(1.1);
+}
