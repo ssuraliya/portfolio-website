@@ -1,9 +1,9 @@
 body {
     background: #000000;
     color: white;
-    font-family: 'Lato';
-    background:#000 url("/static/img/stars.png") repeat top center;
-    z-index:-1;
+    font-family: 'Libre Baskerville';
+    max-width: 1024px;
+    margin: auto;
 }
 
 hr {

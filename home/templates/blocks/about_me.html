@@ -1,7 +1,9 @@
 {% load static wagtailcore_tags %}
 
-<div id="{{self.id}}" class="container">
+<div id="{{self.id}}" class="container mt-5">
     <div class="about-me">About Me.</div>
     <hr>
-    {{self.content|richtext}}
+    <div class="about-me-content">
+        {{self.content|richtext}}
+    </div>
 </div>
