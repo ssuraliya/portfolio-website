@@ -136,10 +136,12 @@
 
 .we-company-name {
   font-size: 20px;
+  line-height: 1.75;
 }
 
 .we-designation {
   font-size: 22px;
+  line-height: 1.75;
 }
 
 .we-skill-tag {
