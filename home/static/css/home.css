@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 450px) {
   .about-me {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -69,7 +69,7 @@
 
 @media screen and (max-width: 450px) {
   .dev-name {
-    font-size: 25px;
+    font-size: 33px;
   }
 }
 
@@ -83,24 +83,6 @@
   opacity: .8;
 }
 
-@media screen and (min-width: 801px) {
-  .dev-designation {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 800px) and (min-width: 451px) {
-  .dev-designation {
-    font-size: 25px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .dev-designation {
-    font-size: 20px;
-  }
-}
-
 
 .dev-company-name {
   margin: 0;
@@ -111,19 +93,19 @@
 }
 
 @media screen and (min-width: 801px) {
-  .dev-company-name {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 800px) and (min-width: 451px) {
-  .dev-company-name {
+  .dev-designation, .dev-company-name {
     font-size: 25px;
   }
 }
 
+@media screen and (max-width: 800px) and (min-width: 451px) {
+  .dev-designation, .dev-company-name {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 450px) {
-  .dev-company-name {
+  .dev-designation, .dev-company-name {
     font-size: 20px;
   }
 }
@@ -139,10 +121,26 @@
   line-height: 1.75;
 }
 
+
+
+@media screen and (max-width: 801px) {
+  .we-company-name {
+    font-size: 18px;
+  }
+}
+
+
 .we-designation {
   font-size: 22px;
   line-height: 1.75;
 }
+
+@media screen and (max-width: 801px) {
+  .we-designation {
+    font-size: 20px;
+  }
+}
+
 
 .we-skill-tag {
   position: relative;
