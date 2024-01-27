@@ -20,6 +20,10 @@
     align-items: start;
     display: flex;
   }
+  .contact-details * {
+    font-size: 14px;
+    height: 14px;
+  }
 }
 
 .about-me {
